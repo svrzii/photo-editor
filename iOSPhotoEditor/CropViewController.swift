@@ -86,8 +86,8 @@ open class CropViewController: UIViewController {
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.toolbar.isTranslucent = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(CropViewController.cancel(_:)))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(CropViewController.done(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Cancel", comment: ""), style: .plain, target: self, action: #selector(CropViewController.cancel(_:)))
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(title: NSLocalizedString("Done", comment: ""), style: .done, target: self, action: #selector(CropViewController.done(_:)))
         
         if self.toolbarItems == nil {
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -213,7 +213,7 @@ open class CropViewController: UIViewController {
             }
         }
         actionSheet.addAction(widescreen)
-        let cancel = UIAlertAction(title: "Cancel", style: .default) { [unowned self] action in
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default) { [unowned self] action in
             self.dismiss(animated: true, completion: nil)
         }
         actionSheet.addAction(cancel)

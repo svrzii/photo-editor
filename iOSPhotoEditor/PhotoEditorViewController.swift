@@ -103,6 +103,8 @@ public final class PhotoEditorViewController: UIViewController {
         configureCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
+		
+		doneButton.setTitle(NSLocalizedString("Done", comment: ""), for: .normal)
     }
     
     func configureCollectionView() {
