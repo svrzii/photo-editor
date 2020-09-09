@@ -53,6 +53,7 @@ let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         
         let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController",bundle: Bundle(for: PhotoEditorViewController.self))
         photoEditor.photoEditorDelegate = self
+		photoEditor.hiddenControls = [.save, .share]
         photoEditor.image = image
         //Colors for drawing and Text, If not set default values will be used
         //photoEditor.colors = [.red, .blue, .green]

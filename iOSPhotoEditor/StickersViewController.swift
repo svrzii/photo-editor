@@ -49,7 +49,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func configureCollectionViews() {
         
-        let frame = CGRect(x: 0,
+        let frame = CGRect(x: scrollView.frame.size.width,
                            y: 0,
                            width: UIScreen.main.bounds.width,
                            height: view.frame.height - 40)
@@ -72,7 +72,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         
         //-----------------------------------
         
-        let emojisFrame = CGRect(x: scrollView.frame.size.width,
+        let emojisFrame = CGRect(x: 0,
                                  y: 0,
                                  width: UIScreen.main.bounds.width,
                                  height: view.frame.height - 40)
@@ -115,12 +115,12 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectioView.frame = CGRect(x: 0,
+        collectioView.frame = CGRect(x: scrollView.frame.size.width,
                                      y: 0,
                                      width: UIScreen.main.bounds.width,
                                      height: view.frame.height - 40)
         
-        emojisCollectioView.frame = CGRect(x: scrollView.frame.size.width,
+        emojisCollectioView.frame = CGRect(x: 0,
                                            y: 0,
                                            width: UIScreen.main.bounds.width,
                                            height: view.frame.height - 40)

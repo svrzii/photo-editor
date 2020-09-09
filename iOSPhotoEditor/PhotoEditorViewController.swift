@@ -83,7 +83,7 @@ public final class PhotoEditorViewController: UIViewController {
         self.setImageView(image: image!)
         
         deleteView.layer.cornerRadius = deleteView.bounds.height / 2
-        deleteView.layer.borderWidth = 2.0
+        deleteView.layer.borderWidth = 1.0
         deleteView.layer.borderColor = UIColor.white.cgColor
         deleteView.clipsToBounds = true
         
